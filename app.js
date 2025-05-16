@@ -14,7 +14,7 @@ function getComputerChoice() {
 
 function getUserChoice() {
     let userChoice = prompt('Type: rock, paper, or scissors').toLowerCase();
-    return humanChoice;
+    return userChoice;
 } 
 
 const computerChoice = getComputerChoice();
@@ -48,5 +48,7 @@ function playRound(userChoice, computerChoice) {
 
 function playGame(); {
     console.log("Welcome to rock, paper, scissors!")
-    play
+    while (humanScore < 5 || computerScore < 5) {
+        playRound()
+    }
 }
