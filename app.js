@@ -41,14 +41,25 @@ function playRound(userChoice, computerChoice) {
         humanScore++;
     } else {
         console.log('Computer wins. Rock beats scissors.')
-        humanScore++;
+        computerScore++;
     } 
     console.log(`User score: ${humanScore} | Computer score: ${computerScore}`);
 };
 
-function playGame(); {
+function playGame() {
     console.log("Welcome to rock, paper, scissors!")
-    while (humanScore < 5 || computerScore < 5) {
-        playRound()
+    humanScore = 0;
+    computerScore = 0;
+    while (humanScore < 5 && computerScore < 5) {
+        let computerChoice = getComputerChoice();
+        let userChoice = getUserChoice();
+        playRound(userChoice, computerChoice);
     }
-}
+    if (humanScore === 5) {
+        console.log("Congratulations, you win!")
+    } else {
+        console.log("Sorry, computer wins.")
+    }
+};
+
+playGame();
