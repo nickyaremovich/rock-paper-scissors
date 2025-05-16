@@ -14,14 +14,8 @@ function getComputerChoice() {
 
 function getUserChoice() {
     let userChoice = prompt('Type: rock, paper, or scissors').toLowerCase();
-    if (userChoice === 'rock') {
-        return 'rock'
-    } else if (userChoice === 'paper') {
-        return 'paper'
-    } else {
-        return 'scissors'
-    }
-}; 
+    return humanChoice;
+} 
 
 const computerChoice = getComputerChoice();
 const userChoice = getUserChoice();
@@ -52,4 +46,7 @@ function playRound(userChoice, computerChoice) {
     console.log(`User score: ${humanScore} | Computer score: ${computerScore}`);
 };
 
-playRound(userChoice, computerChoice);
+function playGame(); {
+    console.log("Welcome to rock, paper, scissors!")
+    play
+}
