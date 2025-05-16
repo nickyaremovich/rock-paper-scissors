@@ -17,9 +17,6 @@ function getUserChoice() {
     return userChoice;
 } 
 
-const computerChoice = getComputerChoice();
-const userChoice = getUserChoice();
-
 function playRound(userChoice, computerChoice) {
     console.log(`User choice: ${userChoice} | Computer choice: ${computerChoice}`)
     if (userChoice === computerChoice) {
