@@ -47,7 +47,7 @@ function playGame() {
     console.log("Welcome to rock, paper, scissors!")
     userScore = 0;
     computerScore = 0;
-    while (userScoreScore < 5 && computerScore < 5) {
+    while (userScore < 5 && computerScore < 5) {
         let computerChoice = getComputerChoice();
         let userChoice = getUserChoice();
         playRound(userChoice, computerChoice);
