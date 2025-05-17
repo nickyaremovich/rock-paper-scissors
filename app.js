@@ -40,7 +40,7 @@ function playRound(userChoice, computerChoice) {
         console.log('Computer wins. Rock beats scissors.')
         computerScore++;
     } 
-    console.log(`User score: ${humanScore} | Computer score: ${computerScore}`);
+    console.log(`User score: ${userScore} | Computer score: ${computerScore}`);
 };
 
 function playGame() {
