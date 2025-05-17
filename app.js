@@ -1,4 +1,4 @@
-let humanScore = 0;
+let userScore = 0;
 let computerScore = 0;
 
 function getComputerChoice() {
@@ -26,16 +26,16 @@ function playRound(userChoice, computerChoice) {
         computerScore++;
     } else if (userChoice === 'rock' && computerChoice === 'scissors') {
         console.log('User wins! Rock beats scissors.')
-        humanScore++;
+        userScore++;
     } else if (userChoice === 'paper' && computerChoice === 'scissors') {
         console.log('Computer wins. Scissors beats paper.')
         computerScore++;
     } else if (userChoice === 'paper' && computerChoice === 'rock') {
         console.log('User wins! Paper beats rock.')
-        humanScore++;
+        userScore++;
     } else if (userChoice === 'scissors' && computerChoice === 'paper') {
         console.log('User wins! Scissors beats paper.')
-        humanScore++;
+        userScore++;
     } else {
         console.log('Computer wins. Rock beats scissors.')
         computerScore++;
@@ -45,14 +45,14 @@ function playRound(userChoice, computerChoice) {
 
 function playGame() {
     console.log("Welcome to rock, paper, scissors!")
-    humanScore = 0;
+    userScore = 0;
     computerScore = 0;
-    while (humanScore < 5 && computerScore < 5) {
+    while (userScoreScore < 5 && computerScore < 5) {
         let computerChoice = getComputerChoice();
         let userChoice = getUserChoice();
         playRound(userChoice, computerChoice);
     }
-    if (humanScore === 5) {
+    if (userScoreScore === 5) {
         console.log("Congratulations, you win!")
     } else {
         console.log("Sorry, computer wins.")
