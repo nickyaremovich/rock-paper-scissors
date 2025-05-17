@@ -52,7 +52,7 @@ function playGame() {
         let userChoice = getUserChoice();
         playRound(userChoice, computerChoice);
     }
-    if (userScoreScore === 5) {
+    if (userScore === 5) {
         console.log("Congratulations, you win!")
     } else {
         console.log("Sorry, computer wins.")
