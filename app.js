@@ -48,14 +48,10 @@ function updateDOM(userChoice, computerChoice) {
 }
 
 function determineWinner(userScore, computerScore) {
-    while (userScore < 5 && computerScore < 5) 
-        playRound(userChoice, computerChoice)
-        updateDOM(userChoice, computerChoice);
     if (userScore === 5) 
         document.querySelector('.result').textContent = `You win! User: ${userScore} || Computer: ${computerScore}`
-    else 
-        document.querySelector('.result').textContent = `You lose User: ${userScore} || Computer: ${ccomputersScore}`     
-    
+    else if (computerScoreScore === 5) 
+        document.querySelector('.result').textContent = `You lose User: ${userScore} || Computer: ${computerScore}`
 }
 
 let buttons = document.querySelectorAll('button');
@@ -66,7 +62,7 @@ buttons.forEach(button => {
         const computerChoice = getComputerChoice();
         playRound(userChoice, computerChoice);
         updateDOM(userChoice, computerChoice);
-        determineWinner(userScore, computerScore);
+        determineWinner();
     });
 });
 
