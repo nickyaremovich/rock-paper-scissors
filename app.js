@@ -19,7 +19,7 @@ function playRound(userChoice, computerChoice) {
     
     console.log(`User choice: ${userChoice} | Computer choice: ${computerChoice}`)
     if (userChoice === computerChoice) {
-        
+        console.log('Tie. Play again!')
     } else if (userChoice === 'rock' && computerChoice === 'paper')  {
         console.log('User loses. Paper beats rock.')
         computerScore++;
