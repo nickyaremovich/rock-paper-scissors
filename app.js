@@ -43,20 +43,6 @@ function playRound(userChoice, computerChoice) {
     console.log(`User score: ${userScore} | Computer score: ${computerScore}`);
 };
 
-function playGame() {
-    console.log("Welcome to rock, paper, scissors!")
-    userScore = 0;
-    computerScore = 0;
-    while (userScore < 5 && computerScore < 5) {
-        let computerChoice = getComputerChoice();
-        let userChoice = getUserChoice();
-        playRound(userChoice, computerChoice);
-    }
-    if (userScore === 5) {
-        console.log("Congratulations, you win!")
-    } else {
-        console.log("Sorry, computer wins.")
-    }
-};
+
 
 playGame();
