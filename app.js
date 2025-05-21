@@ -12,13 +12,24 @@ function getComputerChoice() {
     }
 };
 
-let rock = document.querySelector('#rock').addEventListener('click', playRound());
-let paper = document.querySelector('#paper').addEventListener('click', playRound());
-let scissors = document.querySelector('#scissors').addEventListener('clickl', playRound());
+document.addEventListener("DOMContentLoaded", function() {
+    const buttons = document.querySelectorAll("button");
 
+    buttons.forEach(button => {
+        button.addEventListener("click", function() {
+            alert("You chose: " + this.id);
+        });
+    });
+});
 
+function getUserChoice() {
+    let userChoice = this.id;
+    console.log(userChoice);
+    return userChoice;
+}
 
 function playRound(userChoice, computerChoice) {
+    
     console.log(`User choice: ${userChoice} | Computer choice: ${computerChoice}`)
     if (userChoice === computerChoice) {
         console.log('Tie!')
@@ -44,6 +55,3 @@ function playRound(userChoice, computerChoice) {
     console.log(`User score: ${userScore} | Computer score: ${computerScore}`);
 };
 
-
-
-playGame();
