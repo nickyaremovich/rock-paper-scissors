@@ -50,10 +50,8 @@ function updateDOM(userChoice, computerChoice) {
 function determineWinner() {
     if (userScore === 5) 
         document.querySelector('.result').textContent = `You win! User: ${userScore} || Computer: ${computerScore}. Refresh to play again.`
-        buttons.forEach(button => button.disabled = true);
     if (computerScore === 5) 
         document.querySelector('.result').textContent = `You lose User: ${userScore} || Computer: ${computerScore}. Refresh to play again.`
-        buttons.forEach(button => button.disabled = true);
 }
 
 let buttons = document.querySelectorAll('button');
