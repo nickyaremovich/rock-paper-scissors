@@ -12,10 +12,11 @@ function getComputerChoice() {
     }
 };
 
-function getUserChoice() {
-    let userChoice = prompt('Type: rock, paper, or scissors').toLowerCase();
-    return userChoice;
-} 
+let rock = document.querySelector('#rock').addEventListener('click', playRound());
+let paper = document.querySelector('#paper').addEventListener('click', playRound());
+let scissors = document.querySelector('#scissors').addEventListener('clickl', playRound());
+
+
 
 function playRound(userChoice, computerChoice) {
     console.log(`User choice: ${userChoice} | Computer choice: ${computerChoice}`)
