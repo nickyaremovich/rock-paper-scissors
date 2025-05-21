@@ -12,12 +12,13 @@ function getComputerChoice() {
     }
 };
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", () => {
     const buttons = document.querySelectorAll("button");
 
     buttons.forEach(button => {
-        button.addEventListener("click", function() {
+        button.addEventListener("click", function() {          
             alert("You chose: " + this.id);
+            getUserChoice();
         });
     });
 });
@@ -55,3 +56,4 @@ function playRound(userChoice, computerChoice) {
     console.log(`User score: ${userScore} | Computer score: ${computerScore}`);
 };
 
+playRound(getUserChoice(), getComputerChoice());
