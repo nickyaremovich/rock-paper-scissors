@@ -42,17 +42,17 @@ function playRound(userChoice, computerChoice) {
     console.log(`User score: ${userScore} | Computer score: ${computerScore}`);
 };
 
-function updateDOM(userChoice, computerChoice, result) {
-    document.getElementsByClassName('display').textContent = `You chose ${userChoice} and computer chose ${computerChoice}.`
-    document.getElementsByClassName('score').textContent = `User score: ${userScore} | Computer score: ${computerScore}.`
+function updateDOM(userChoice, computerChoice) {
+    document.querySelector('.display').textContent = `User: ${userChoice} | Computer: ${computerChoice}.`
+    document.querySelector('.score').textContent = `User score: ${userScore} | Computer score: ${computerScore}.`
 }
-
+let buttons = document.querySelectorAll('button');
 buttons.forEach(button => {
     button.addEventListener('click', function(e) {
         const userChoice = e.target.id
         const computerChoice = getComputerChoice();
-        const result = playRound(userChoice, computerChoice);
+        playRound(userChoice, computerChoice);
         
-        updateDOM(userChoice, computerChoice, result);
+        updateDOM(userChoice, computerChoice);
     });
 });
