@@ -19,7 +19,7 @@ function playRound(userChoice, computerChoice) {
     
     console.log(`User choice: ${userChoice} | Computer choice: ${computerChoice}`)
     if (userChoice === computerChoice) {
-        display.appendChild('p')
+        
     } else if (userChoice === 'rock' && computerChoice === 'paper')  {
         console.log('User loses. Paper beats rock.')
         computerScore++;
@@ -42,13 +42,17 @@ function playRound(userChoice, computerChoice) {
     console.log(`User score: ${userScore} | Computer score: ${computerScore}`);
 };
 
-let buttons = document.querySelectorAll('button')
-let display = document.querySelector('.display');
+function updateDOM(userChoice, computerChoice, result) {
+    document.getElementsByClassName('display').textContent = `You chose ${userChoice} and computer chose ${computerChoice}.`
+    document.getElementsByClassName('score').textContent = `User score: ${userScore} | Computer score: ${computerScore}.`
+}
 
 buttons.forEach(button => {
     button.addEventListener('click', function(e) {
         const userChoice = e.target.id
         const computerChoice = getComputerChoice();
         const result = playRound(userChoice, computerChoice);
+        
+        updateDOM(userChoice, computerChoice, result);
     });
 });
