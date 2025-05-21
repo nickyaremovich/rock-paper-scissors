@@ -46,13 +46,27 @@ function updateDOM(userChoice, computerChoice) {
     document.querySelector('.display').textContent = `User: ${userChoice} | Computer: ${computerChoice}.`
     document.querySelector('.score').textContent = `User score: ${userScore} | Computer score: ${computerScore}.`
 }
+
+function determineWinner(userScore, computerScore) {
+    while (userScore < 5 && computerScore < 5) 
+        playRound(userChoice, computerChoice)
+        updateDOM(userChoice, computerChoice);
+    if (userScore === 5) 
+        document.querySelector('.result').textContent = `You win! User: ${userScore} || Computer: ${computerScore}`
+    else 
+        document.querySelector('.result').textContent = `You lose User: ${userScore} || Computer: ${ccomputersScore}`     
+    
+}
+
 let buttons = document.querySelectorAll('button');
+
 buttons.forEach(button => {
     button.addEventListener('click', function(e) {
         const userChoice = e.target.id
         const computerChoice = getComputerChoice();
         playRound(userChoice, computerChoice);
-        
         updateDOM(userChoice, computerChoice);
+        determineWinner(userScore, computerScore);
     });
 });
+
