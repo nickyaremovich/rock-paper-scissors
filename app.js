@@ -12,22 +12,8 @@ function getComputerChoice() {
     }
 };
 
-document.addEventListener("DOMContentLoaded", () => {
-    const buttons = document.querySelectorAll("button");
 
-    buttons.forEach(button => {
-        button.addEventListener("click", function() {          
-            alert("You chose: " + this.id);
-            getUserChoice();
-        });
-    });
-});
 
-function getUserChoice() {
-    let userChoice = this.id;
-    console.log(userChoice);
-    return userChoice;
-}
 
 function playRound(userChoice, computerChoice) {
     
@@ -56,4 +42,12 @@ function playRound(userChoice, computerChoice) {
     console.log(`User score: ${userScore} | Computer score: ${computerScore}`);
 };
 
-playRound(getUserChoice(), getComputerChoice());
+let buttons = document.querySelectorAll('button')
+
+buttons.forEach(button => {
+    button.addEventListener('click', function(e) {
+        const userChoice = e.target.id
+        const computerChoice = getComputerChoice();
+        playRound(userChoice, computerChoice);
+    });
+});
