@@ -19,7 +19,7 @@ function playRound(userChoice, computerChoice) {
     
     console.log(`User choice: ${userChoice} | Computer choice: ${computerChoice}`)
     if (userChoice === computerChoice) {
-        console.log('Tie!')
+        display.appendChild('p')
     } else if (userChoice === 'rock' && computerChoice === 'paper')  {
         console.log('User loses. Paper beats rock.')
         computerScore++;
@@ -43,11 +43,12 @@ function playRound(userChoice, computerChoice) {
 };
 
 let buttons = document.querySelectorAll('button')
+let display = document.querySelector('.display');
 
 buttons.forEach(button => {
     button.addEventListener('click', function(e) {
         const userChoice = e.target.id
         const computerChoice = getComputerChoice();
-        playRound(userChoice, computerChoice);
+        const result = playRound(userChoice, computerChoice);
     });
 });
