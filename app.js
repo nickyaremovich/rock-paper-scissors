@@ -16,7 +16,7 @@ function getComputerChoice() {
 
 
 function playRound(userChoice, computerChoice) {
-    
+    // remove the console logs and update DOM better
     console.log(`User choice: ${userChoice} | Computer choice: ${computerChoice}`)
     if (userChoice === computerChoice) {
         console.log('Tie. Play again!')
@@ -43,6 +43,7 @@ function playRound(userChoice, computerChoice) {
 };
 
 function updateDOM(userChoice, computerChoice) {
+    // add round by round results 
     document.querySelector('.display').textContent = `User: ${userChoice} | Computer: ${computerChoice}.`
     document.querySelector('.score').textContent = `User score: ${userScore} | Computer score: ${computerScore}.`
 }
