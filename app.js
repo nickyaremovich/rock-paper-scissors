@@ -50,7 +50,7 @@ function updateDOM(userChoice, computerChoice) {
 function determineWinner(userScore, computerScore) {
     if (userScore === 5) 
         document.querySelector('.result').textContent = `You win! User: ${userScore} || Computer: ${computerScore}`
-    else if (computerScoreScore === 5) 
+    else if (computerScore === 5) 
         document.querySelector('.result').textContent = `You lose User: ${userScore} || Computer: ${computerScore}`
 }
 
